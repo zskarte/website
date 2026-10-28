@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Seite nicht gefunden – ZS-Karte</title>
+  <script>
+    // Keep existing app bookmarks, share links and journal QR codes working.
+    // Only known Angular route prefixes move to the fixed production app origin.
+    if (/^\/(?:login|operations|main|map|share|help)(?:\/|$)/.test(window.location.pathname)) {
+      const pathname = window.location.pathname.replace(/^\/map\/?$/, '/main/map');
+      window.location.replace(
+        'https://app.zskarte.ch' + pathname + window.location.search + window.location.hash
+      );
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Seite nicht gefunden</h1>
+    <p>Die Anwendung ist unter <a href="https://app.zskarte.ch/">app.zskarte.ch</a> erreichbar.</p>
+    <p><a href="https://zskarte.ch/">Zur Website</a></p>
+  </main>
+</body>
+</html>
